@@ -42,7 +42,7 @@
             this.artikelenBeherenBtn.Style = MetroFramework.MetroColorStyle.Blue;
             this.artikelenBeherenBtn.StyleManager = null;
             this.artikelenBeherenBtn.TabIndex = 0;
-            this.artikelenBeherenBtn.Text = "Artikelen beheren";
+            this.artikelenBeherenBtn.Text = "Beheren";
             this.artikelenBeherenBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             this.artikelenBeherenBtn.TileCount = 0;
             this.artikelenBeherenBtn.Click += new System.EventHandler(this.artikelenBeherenBtn_Click);
