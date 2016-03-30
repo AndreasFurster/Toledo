@@ -16,7 +16,7 @@ namespace Toledo.Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
+            Application.Run(new KeuzeScherm());
         }
     }
 }
