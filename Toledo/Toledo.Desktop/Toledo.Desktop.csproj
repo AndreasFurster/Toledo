@@ -65,6 +65,8 @@
     <Compile Include="KeuzeScherm.Designer.cs">
       <DependentUpon>KeuzeScherm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Artikel.cs" />
+    <Compile Include="Models\Verkoop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verkopen.cs">
