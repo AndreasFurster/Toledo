@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(495, 371);
             this.Name = "KeuzeScherm";
             this.Text = "KeuzeScherm";
+            this.Load += new System.EventHandler(this.KeuzeScherm_Load);
             this.ResumeLayout(false);
 
         }
