@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace Toledo.Desktop
 {
     public partial class KeuzeScherm : MetroForm
     {
+        private ArtikelenBeheren _ab;
+        private Verkopen _v;
+
         public KeuzeScherm()
         {
             InitializeComponent();
@@ -19,7 +23,18 @@ namespace Toledo.Desktop
 
         private void KeuzeScherm_Load(object sender, EventArgs e)
         {
-            
+            _ab = new ArtikelenBeheren();
+            _v = new Verkopen();
+        }
+
+        private void artikelenBeherenBtn_Click(object sender, EventArgs e)
+        {
+            _ab.ShowDialog(this);        
+        }
+
+        private void verkopenBtn_Click(object sender, EventArgs e)
+        {
+            _v.ShowDialog(this);
         }
     }
 }
