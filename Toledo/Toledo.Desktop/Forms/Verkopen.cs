@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using MetroFramework.Forms;
 
-namespace Toledo.Desktop
+namespace Toledo.Desktop.Forms
 {
     public partial class Verkopen : CustomMetroForm
     {

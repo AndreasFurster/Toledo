@@ -1,4 +1,4 @@
-﻿namespace Toledo.Desktop
+﻿namespace Toledo.Desktop.Forms
 {
     partial class Beheren
     {

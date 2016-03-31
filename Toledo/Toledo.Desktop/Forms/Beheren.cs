@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using Toledo.Desktop.Forms;
 
-namespace Toledo.Desktop
+namespace Toledo.Desktop.Forms
 {
     public partial class Beheren : CustomMetroForm
     {
