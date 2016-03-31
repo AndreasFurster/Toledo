@@ -9,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using Toledo.Desktop.Forms;
 
 namespace Toledo.Desktop
 {
-    public partial class ArtikelenBeheren : CustomMetroForm
+    public partial class Beheren : CustomMetroForm
     {
-        public ArtikelenBeheren()
+        public Beheren()
         {
             InitializeComponent();
             ListenForBarcodes();
@@ -23,15 +24,16 @@ namespace Toledo.Desktop
 
         private void ArtikelenBeheren_BarcodeInput(object sender, BarcodeInputEventArgs e)
         {
-            metroTextBox1.Text = e.Barcode;
+            var ba = new BeheerArtikel(e.Barcode);
+            ba.ShowDialog(this);
         }
 
-        private void ArtikelenBeheren_Load(object sender, EventArgs e)
+        private void Beheren_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void ArtikelenBeheren_KeyPress(object sender, KeyPressEventArgs e)
+        private void Beheren_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

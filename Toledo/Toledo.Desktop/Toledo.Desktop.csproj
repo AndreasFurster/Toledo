@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -58,11 +59,17 @@
     <Compile Include="CustomMetroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ArtikelenBeheren.cs">
+    <Compile Include="Forms\BeheerArtikel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ArtikelenBeheren.Designer.cs">
-      <DependentUpon>ArtikelenBeheren.cs</DependentUpon>
+    <Compile Include="Forms\BeheerArtikel.Designer.cs">
+      <DependentUpon>BeheerArtikel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Beheren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Beheren.Designer.cs">
+      <DependentUpon>Beheren.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\KeuzeScherm.cs">
       <SubType>Form</SubType>
@@ -80,8 +87,14 @@
     <Compile Include="Forms\Verkopen.Designer.cs">
       <DependentUpon>Verkopen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\ArtikelenBeheren.resx">
-      <DependentUpon>ArtikelenBeheren.cs</DependentUpon>
+    <EmbeddedResource Include="CustomMetroForm.resx">
+      <DependentUpon>CustomMetroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BeheerArtikel.resx">
+      <DependentUpon>BeheerArtikel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Beheren.resx">
+      <DependentUpon>Beheren.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KeuzeScherm.resx">
       <DependentUpon>KeuzeScherm.cs</DependentUpon>
@@ -94,6 +107,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Forms\Verkopen.resx">
       <DependentUpon>Verkopen.cs</DependentUpon>
@@ -114,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
-    <Content Include="icon.ico" />
+    <None Include="Resources\barcode-scan.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

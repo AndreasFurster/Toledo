@@ -13,7 +13,7 @@ namespace Toledo.Desktop
 {
     public partial class KeuzeScherm : CustomMetroForm
     {
-        private ArtikelenBeheren _ab;
+        private Beheren _ab;
         private Verkopen _v;
 
         public KeuzeScherm()
@@ -24,7 +24,7 @@ namespace Toledo.Desktop
 
         private void KeuzeScherm_Load(object sender, EventArgs e)
         {
-            _ab = new ArtikelenBeheren();
+            _ab = new Beheren();
             _v = new Verkopen();
         }
 

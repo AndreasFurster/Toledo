@@ -37,6 +37,21 @@ namespace Toledo.Desktop
                 PressedKeys = string.Empty;
             }
         }
+
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMetroForm));
+            this.SuspendLayout();
+            // 
+            // CustomMetroForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "CustomMetroForm";
+            this.ResumeLayout(false);
+
+        }
     }
 
     public class BarcodeInputEventArgs : EventArgs
