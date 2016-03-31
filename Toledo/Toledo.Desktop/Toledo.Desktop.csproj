@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomMetroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\ArtikelenBeheren.cs">
       <SubType>Form</SubType>
     </Compile>

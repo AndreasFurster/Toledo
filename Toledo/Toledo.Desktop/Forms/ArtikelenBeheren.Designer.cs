@@ -49,8 +49,8 @@
             this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.opslaanBtn = new MetroFramework.Controls.MetroButton();
-            this.alleArtikelenTabPage = new MetroFramework.Controls.MetroTabPage();
             this.artikelenBewerken = new MetroFramework.Controls.MetroTabPage();
+            this.alleArtikelenTabPage = new MetroFramework.Controls.MetroTabPage();
             this.metroTabControl1.SuspendLayout();
             this.nieuwArtikelTabPage.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -67,7 +67,7 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Light;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(884, 558);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabControl1.StyleManager = null;
@@ -426,26 +426,6 @@
             this.opslaanBtn.Text = "Opslaan";
             this.opslaanBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
-            // alleArtikelenTabPage
-            // 
-            this.alleArtikelenTabPage.CustomBackground = false;
-            this.alleArtikelenTabPage.HorizontalScrollbar = false;
-            this.alleArtikelenTabPage.HorizontalScrollbarBarColor = true;
-            this.alleArtikelenTabPage.HorizontalScrollbarHighlightOnWheel = false;
-            this.alleArtikelenTabPage.HorizontalScrollbarSize = 10;
-            this.alleArtikelenTabPage.Location = new System.Drawing.Point(4, 35);
-            this.alleArtikelenTabPage.Name = "alleArtikelenTabPage";
-            this.alleArtikelenTabPage.Size = new System.Drawing.Size(876, 519);
-            this.alleArtikelenTabPage.Style = MetroFramework.MetroColorStyle.Blue;
-            this.alleArtikelenTabPage.StyleManager = null;
-            this.alleArtikelenTabPage.TabIndex = 1;
-            this.alleArtikelenTabPage.Text = "Overzicht alle artikelen";
-            this.alleArtikelenTabPage.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.alleArtikelenTabPage.VerticalScrollbar = false;
-            this.alleArtikelenTabPage.VerticalScrollbarBarColor = true;
-            this.alleArtikelenTabPage.VerticalScrollbarHighlightOnWheel = false;
-            this.alleArtikelenTabPage.VerticalScrollbarSize = 10;
-            // 
             // artikelenBewerken
             // 
             this.artikelenBewerken.CustomBackground = false;
@@ -466,6 +446,26 @@
             this.artikelenBewerken.VerticalScrollbarHighlightOnWheel = false;
             this.artikelenBewerken.VerticalScrollbarSize = 10;
             // 
+            // alleArtikelenTabPage
+            // 
+            this.alleArtikelenTabPage.CustomBackground = false;
+            this.alleArtikelenTabPage.HorizontalScrollbar = false;
+            this.alleArtikelenTabPage.HorizontalScrollbarBarColor = true;
+            this.alleArtikelenTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.alleArtikelenTabPage.HorizontalScrollbarSize = 10;
+            this.alleArtikelenTabPage.Location = new System.Drawing.Point(4, 35);
+            this.alleArtikelenTabPage.Name = "alleArtikelenTabPage";
+            this.alleArtikelenTabPage.Size = new System.Drawing.Size(876, 519);
+            this.alleArtikelenTabPage.Style = MetroFramework.MetroColorStyle.Blue;
+            this.alleArtikelenTabPage.StyleManager = null;
+            this.alleArtikelenTabPage.TabIndex = 1;
+            this.alleArtikelenTabPage.Text = "Overzicht alle artikelen";
+            this.alleArtikelenTabPage.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.alleArtikelenTabPage.VerticalScrollbar = false;
+            this.alleArtikelenTabPage.VerticalScrollbarBarColor = true;
+            this.alleArtikelenTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.alleArtikelenTabPage.VerticalScrollbarSize = 10;
+            // 
             // ArtikelenBeheren
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +478,7 @@
             this.Text = "Artikelen beheren";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ArtikelenBeheren_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArtikelenBeheren_KeyPress);
             this.metroTabControl1.ResumeLayout(false);
             this.nieuwArtikelTabPage.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

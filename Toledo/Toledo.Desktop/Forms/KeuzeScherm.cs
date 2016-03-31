@@ -11,7 +11,7 @@ using MetroFramework.Forms;
 
 namespace Toledo.Desktop
 {
-    public partial class KeuzeScherm : MetroForm
+    public partial class KeuzeScherm : CustomMetroForm
     {
         private ArtikelenBeheren _ab;
         private Verkopen _v;
@@ -19,6 +19,7 @@ namespace Toledo.Desktop
         public KeuzeScherm()
         {
             InitializeComponent();
+            ListenForBarcodes();
         }
 
         private void KeuzeScherm_Load(object sender, EventArgs e)
