@@ -39,11 +39,20 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\references\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,9 +65,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomMetroForm.cs">
+    <Compile Include="Helpers\CustomMetroForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Data\ToledoDb.cs" />
     <Compile Include="Forms\BeheerArtikel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,13 +81,23 @@
     <Compile Include="Forms\Beheren.Designer.cs">
       <DependentUpon>Beheren.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Bevestiging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bevestiging.Designer.cs">
+      <DependentUpon>Bevestiging.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KeuzeScherm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\KeuzeScherm.Designer.cs">
       <DependentUpon>KeuzeScherm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\MetroColorConverter.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Artikel.cs" />
+    <Compile Include="Models\BtwTarief.cs" />
+    <Compile Include="Models\Categorie.cs" />
     <Compile Include="Models\Verkoop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,7 +107,7 @@
     <Compile Include="Forms\Verkopen.Designer.cs">
       <DependentUpon>Verkopen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomMetroForm.resx">
+    <EmbeddedResource Include="Helpers\CustomMetroForm.resx">
       <DependentUpon>CustomMetroForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BeheerArtikel.resx">
@@ -95,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Beheren.resx">
       <DependentUpon>Beheren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bevestiging.resx">
+      <DependentUpon>Bevestiging.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KeuzeScherm.resx">
       <DependentUpon>KeuzeScherm.cs</DependentUpon>
