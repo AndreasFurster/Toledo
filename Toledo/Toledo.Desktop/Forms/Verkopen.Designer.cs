@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Verkopen));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Verkopen));
             this.verkopenGrid = new System.Windows.Forms.DataGridView();
             this.barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aantal = new System.Windows.Forms.DataGridViewTextBoxColumn();

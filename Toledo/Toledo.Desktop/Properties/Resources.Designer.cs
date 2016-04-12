@@ -39,7 +39,7 @@ namespace Toledo.Desktop.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Toledo.Desktop.Properties.Resources", typeof(Resources).Assembly);
+                    var temp = new global::System.Resources.ResourceManager("Toledo.Desktop.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,7 +65,7 @@ namespace Toledo.Desktop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap barcode_scan {
             get {
-                object obj = ResourceManager.GetObject("barcode_scan", resourceCulture);
+                var obj = ResourceManager.GetObject("barcode_scan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

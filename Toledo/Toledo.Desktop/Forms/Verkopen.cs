@@ -1,15 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using Toledo.Desktop.Data;
+using Toledo.Desktop.Helpers;
 using Toledo.Desktop.Models;
 
 namespace Toledo.Desktop.Forms
 {
     public partial class Verkopen : CustomMetroForm
     {
-        private readonly Verkoop verkoop = new Verkoop();
+        private readonly Verkoop _verkoop = new Verkoop();
 
         public Verkopen()
         {
@@ -30,8 +32,8 @@ namespace Toledo.Desktop.Forms
                     return;
                 }
 
-                verkoop.Artikelen.Add(artikel);
-                db.Verkopen.AddOrUpdate(verkoop);
+                _verkoop.Artikelen.Add(artikel);
+                db.Verkopen.AddOrUpdate(_verkoop);
                 var task = db.SaveChangesAsync();
                 ReloadGrid();
                 task.Wait();
@@ -40,20 +42,22 @@ namespace Toledo.Desktop.Forms
 
         private void ReloadGrid()
         {
-            var artikelen = verkoop.Artikelen.GroupBy(a => a.Barcode);
+            var rows = new List<object>();
+            var artikelen = _verkoop.Artikelen.GroupBy(a => a.Barcode);
+
             foreach (var artikelgroep in artikelen)
             {
-                var row = new
+                rows.Add(new
                 {
-                    barcode = artikelgroep.First().Barcode,
+                    barcode = artikelgroep.Key,
                     aantal = artikelgroep.Count(),
                     beschrijving = artikelgroep.First().Omschrijving,
                     prijsPerStuk = artikelgroep.First().KortingsPrijsInclBtw ?? artikelgroep.First().StandaardPrijsInclBtw,
                     prijsTotaal = artikelgroep.Sum(a => a.KortingsPrijsInclBtw ?? a.StandaardPrijsInclBtw)
-                };
-
-                verkopenGrid.Rows.Add(row);
+                });
             }
+
+            verkopenGrid.DataSource = rows;
         }
 
         private void Verkopen_Load(object sender, EventArgs e)

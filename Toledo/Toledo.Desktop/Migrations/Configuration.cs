@@ -5,14 +5,14 @@ namespace Toledo.Desktop.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Toledo.Desktop.Data.ToledoDb>
+    internal sealed class Configuration : DbMigrationsConfiguration<Data.ToledoDb>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Toledo.Desktop.Data.ToledoDb context)
+        protected override void Seed(Data.ToledoDb context)
         {
             //  This method will be called after migrating to the latest version.
 

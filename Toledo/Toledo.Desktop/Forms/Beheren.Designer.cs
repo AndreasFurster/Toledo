@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beheren));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Beheren));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.artikelenBewerken = new MetroFramework.Controls.MetroTabPage();
             this.alleArtikelenTabPage = new MetroFramework.Controls.MetroTabPage();

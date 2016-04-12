@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeuzeScherm));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(KeuzeScherm));
             this.artikelenBeherenBtn = new MetroFramework.Controls.MetroTile();
             this.verkopenBtn = new MetroFramework.Controls.MetroTile();
             this.label1 = new System.Windows.Forms.Label();

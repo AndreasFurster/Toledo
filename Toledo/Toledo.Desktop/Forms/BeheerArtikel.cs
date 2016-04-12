@@ -16,21 +16,21 @@ namespace Toledo.Desktop.Forms
 {
     public partial class BeheerArtikel : CustomMetroForm
     {
-        private ToledoDb db = new ToledoDb();
-        private Artikel Artikel;
+        private ToledoDb _db = new ToledoDb();
+        private Artikel _artikel;
 
         public BeheerArtikel(string barcode)
         {
-            var artikel = db.Artikelen.SingleOrDefault(a => a.Barcode == barcode);
+            var artikel = _db.Artikelen.SingleOrDefault(a => a.Barcode == barcode);
             
             if (artikel != null)
             {
-                Artikel = artikel;
+                _artikel = artikel;
             }
             else
             {
-                Artikel = new Artikel();
-                Artikel.Barcode = barcode;
+                _artikel = new Artikel();
+                _artikel.Barcode = barcode;
             }
 
             InitializeComponent();
@@ -38,10 +38,10 @@ namespace Toledo.Desktop.Forms
 
         private void BeheerArtikel_Load(object sender, EventArgs e)
         {
-            artikelCode.Text = Artikel.Barcode;
-            omschrijving.Text = Artikel.Omschrijving;
+            artikelCode.Text = _artikel.Barcode;
+            omschrijving.Text = _artikel.Omschrijving;
 
-            switch (Artikel.BtwTarief)
+            switch (_artikel.BtwTarief)
             {
                 case BtwTarief.Btw21:
                     btw21.Checked = true;
@@ -54,24 +54,24 @@ namespace Toledo.Desktop.Forms
                     break;
             }
 
-            standaardPrijsInclBtw.Text = Artikel.StandaardPrijsInclBtw.ToString();
-            standaardPrijsExclBtw.Text = SubtractBtw(Artikel.StandaardPrijsInclBtw, Artikel.BtwTarief).ToString();
+            standaardPrijsInclBtw.Text = _artikel.StandaardPrijsInclBtw.ToString();
+            standaardPrijsExclBtw.Text = SubtractBtw(_artikel.StandaardPrijsInclBtw, _artikel.BtwTarief).ToString();
             
-            kortingsPrijsInclBtw.Text = Artikel.KortingsPrijsInclBtw.ToString();
-            kortingsPrijsExclBtw.Text = SubtractBtw(Artikel.KortingsPrijsInclBtw, Artikel.BtwTarief).ToString();
+            kortingsPrijsInclBtw.Text = _artikel.KortingsPrijsInclBtw.ToString();
+            kortingsPrijsExclBtw.Text = SubtractBtw(_artikel.KortingsPrijsInclBtw, _artikel.BtwTarief).ToString();
 
-            categorie.DataSource = db.Categorieen.ToArray();
+            categorie.DataSource = _db.Categorieen.ToArray();
 
-            leverbaar.Checked = Artikel.Leverbaar;
+            leverbaar.Checked = _artikel.Leverbaar;
         }
 
         private void opslaanBtn_Click(object sender, EventArgs e)
         {
-            Artikel.Omschrijving = omschrijving.Text;
+            _artikel.Omschrijving = omschrijving.Text;
 
-            if (btw21.Checked)  Artikel.BtwTarief = BtwTarief.Btw21;
-            if (btw6.Checked)   Artikel.BtwTarief = BtwTarief.Btw6;
-            if (btw0.Checked)   Artikel.BtwTarief = BtwTarief.Btw0;
+            if (btw21.Checked)  _artikel.BtwTarief = BtwTarief.Btw21;
+            if (btw6.Checked)   _artikel.BtwTarief = BtwTarief.Btw6;
+            if (btw0.Checked)   _artikel.BtwTarief = BtwTarief.Btw0;
 
             decimal standaardPrijs;
             var heeftStandaardPrijs = decimal.TryParse(standaardPrijsInclBtw.Text, out standaardPrijs);
@@ -79,27 +79,27 @@ namespace Toledo.Desktop.Forms
             decimal kortingsPrijs;
             var heeftKortingsPrijs = decimal.TryParse(kortingsPrijsExclBtw.Text, out kortingsPrijs);
 
-            Artikel.StandaardPrijsInclBtw = heeftStandaardPrijs ? standaardPrijs : (decimal?) null;
-            Artikel.KortingsPrijsInclBtw = heeftKortingsPrijs ? kortingsPrijs : (decimal?) null;
+            _artikel.StandaardPrijsInclBtw = heeftStandaardPrijs ? standaardPrijs : (decimal?) null;
+            _artikel.KortingsPrijsInclBtw = heeftKortingsPrijs ? kortingsPrijs : (decimal?) null;
 
-            var cat = db.Categorieen.SingleOrDefault(c => c.Name == categorie.Text) ??
-                      db.Categorieen.Add(new Categorie(categorie.Text));
+            var cat = _db.Categorieen.SingleOrDefault(c => c.Name == categorie.Text) ??
+                      _db.Categorieen.Add(new Categorie(categorie.Text));
 
-            Artikel.Categorie = cat;
+            _artikel.Categorie = cat;
 
-            Artikel.Leverbaar = leverbaar.Checked;
+            _artikel.Leverbaar = leverbaar.Checked;
 
-            if (db.Artikelen.Any(a => a.Id == Artikel.Id))
+            if (_db.Artikelen.Any(a => a.Id == _artikel.Id))
             {
-                db.Artikelen.Attach(Artikel);
-                db.Entry(Artikel).State = EntityState.Modified;
+                _db.Artikelen.Attach(_artikel);
+                _db.Entry(_artikel).State = EntityState.Modified;
             }
             else
             {
-                db.Artikelen.Add(Artikel);
+                _db.Artikelen.Add(_artikel);
             }
 
-            db.SaveChanges();
+            _db.SaveChanges();
             Close();
         }
 

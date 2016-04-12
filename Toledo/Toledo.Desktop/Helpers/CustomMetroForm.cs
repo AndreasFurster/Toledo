@@ -1,55 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
-namespace Toledo.Desktop
+namespace Toledo.Desktop.Helpers
 {
     public class CustomMetroForm : MetroForm
     {
         public event BarcodeInputHandler BarcodeInput;
         public delegate void BarcodeInputHandler(object sender, BarcodeInputEventArgs e);
 
-        private Regex BarcodeRegex = new Regex("###([0-9]{12,13})###");
+        private readonly Regex _barcodeRegex = new Regex("###([0-9]{12,13})###");
 
-        private string PressedKeys = string.Empty;
+        private string _pressedKeys = string.Empty;
 
         protected void ListenForBarcodes()
         {
-            this.KeyPreview = true;
-            this.KeyPress += new KeyPressEventHandler(ScannerInput);
+            KeyPreview = true;
+            KeyPress += ScannerInput;
         }
 
         private void ScannerInput(object sender, KeyPressEventArgs e)
         {
-            PressedKeys += e.KeyChar;
-            var mc = BarcodeRegex.Match(PressedKeys);
+            _pressedKeys += e.KeyChar;
+            var mc = _barcodeRegex.Match(_pressedKeys);
 
             if (mc.Success)
             {
-                if(BarcodeInput != null)
-                {
-                    BarcodeInput(this, new BarcodeInputEventArgs(mc.Groups[1].Value));
-                }
+                BarcodeInput?.Invoke(this, new BarcodeInputEventArgs(mc.Groups[1].Value));
 
-                PressedKeys = string.Empty;
+                _pressedKeys = string.Empty;
             }
         }
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMetroForm));
-            this.SuspendLayout();
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMetroForm));
+            SuspendLayout();
             // 
             // CustomMetroForm
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "CustomMetroForm";
-            this.ResumeLayout(false);
+            ClientSize = new System.Drawing.Size(284, 261);
+            Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            Location = new System.Drawing.Point(0, 0);
+            Name = "CustomMetroForm";
+            ResumeLayout(false);
 
         }
     }
