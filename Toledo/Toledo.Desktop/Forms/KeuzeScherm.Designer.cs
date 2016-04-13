@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(KeuzeScherm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeuzeScherm));
             this.artikelenBeherenBtn = new MetroFramework.Controls.MetroTile();
             this.verkopenBtn = new MetroFramework.Controls.MetroTile();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.artikelenBeherenBtn.Location = new System.Drawing.Point(23, 63);
             this.artikelenBeherenBtn.Name = "artikelenBeherenBtn";
             this.artikelenBeherenBtn.Size = new System.Drawing.Size(200, 200);
-            this.artikelenBeherenBtn.Style = MetroFramework.MetroColorStyle.Blue;
+            this.artikelenBeherenBtn.Style = MetroFramework.MetroColorStyle.Magenta;
             this.artikelenBeherenBtn.StyleManager = null;
             this.artikelenBeherenBtn.TabIndex = 0;
             this.artikelenBeherenBtn.Text = "Beheren";
@@ -54,7 +54,7 @@
             this.verkopenBtn.Location = new System.Drawing.Point(243, 63);
             this.verkopenBtn.Name = "verkopenBtn";
             this.verkopenBtn.Size = new System.Drawing.Size(200, 200);
-            this.verkopenBtn.Style = MetroFramework.MetroColorStyle.Blue;
+            this.verkopenBtn.Style = MetroFramework.MetroColorStyle.Magenta;
             this.verkopenBtn.StyleManager = null;
             this.verkopenBtn.TabIndex = 1;
             this.verkopenBtn.Text = "Verkopen";
@@ -87,6 +87,7 @@
             this.MaximizeBox = false;
             this.Name = "KeuzeScherm";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Magenta;
             this.Text = "Wat gaan we doen?";
             this.Load += new System.EventHandler(this.KeuzeScherm_Load);
             this.ResumeLayout(false);

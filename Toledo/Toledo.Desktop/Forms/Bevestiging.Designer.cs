@@ -45,7 +45,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(24, 64);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel1.StyleManager = null;
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "metroLabel1";
@@ -71,7 +71,7 @@
             this.okBtn.Location = new System.Drawing.Point(464, 3);
             this.okBtn.Name = "okBtn";
             this.okBtn.Size = new System.Drawing.Size(59, 23);
-            this.okBtn.Style = MetroFramework.MetroColorStyle.Blue;
+            this.okBtn.Style = MetroFramework.MetroColorStyle.Magenta;
             this.okBtn.StyleManager = null;
             this.okBtn.TabIndex = 0;
             this.okBtn.Text = "OK";
@@ -84,7 +84,7 @@
             this.annulerenBtn.Location = new System.Drawing.Point(369, 3);
             this.annulerenBtn.Name = "annulerenBtn";
             this.annulerenBtn.Size = new System.Drawing.Size(89, 23);
-            this.annulerenBtn.Style = MetroFramework.MetroColorStyle.Blue;
+            this.annulerenBtn.Style = MetroFramework.MetroColorStyle.Magenta;
             this.annulerenBtn.StyleManager = null;
             this.annulerenBtn.TabIndex = 1;
             this.annulerenBtn.Text = "Annuleren";
@@ -101,6 +101,7 @@
             this.MaximizeBox = false;
             this.Name = "Bevestiging";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Magenta;
             this.Text = "Bevestiging";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

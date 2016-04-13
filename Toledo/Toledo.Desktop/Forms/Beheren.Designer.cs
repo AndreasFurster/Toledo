@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Beheren));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Beheren));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.artikelenBewerken = new MetroFramework.Controls.MetroTabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.alleArtikelenTabPage = new MetroFramework.Controls.MetroTabPage();
             this.artikelenLijst = new System.Windows.Forms.DataGridView();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Omschrijving = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtwTarief = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabControl1.SuspendLayout();
             this.artikelenBewerken.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.alleArtikelenTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.artikelenLijst)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -59,8 +59,8 @@
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(1117, 454);
-            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTabControl1.Size = new System.Drawing.Size(1067, 658);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroTabControl1.StyleManager = null;
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -79,7 +79,7 @@
             this.artikelenBewerken.Location = new System.Drawing.Point(4, 35);
             this.artikelenBewerken.Name = "artikelenBewerken";
             this.artikelenBewerken.Size = new System.Drawing.Size(1109, 415);
-            this.artikelenBewerken.Style = MetroFramework.MetroColorStyle.Blue;
+            this.artikelenBewerken.Style = MetroFramework.MetroColorStyle.Magenta;
             this.artikelenBewerken.StyleManager = null;
             this.artikelenBewerken.TabIndex = 2;
             this.artikelenBewerken.Text = "Artikel bewerken";
@@ -88,6 +88,19 @@
             this.artikelenBewerken.VerticalScrollbarBarColor = true;
             this.artikelenBewerken.VerticalScrollbarHighlightOnWheel = false;
             this.artikelenBewerken.VerticalScrollbarSize = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Toledo.Desktop.Properties.Resources.barcode_scan;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1109, 415);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // alleArtikelenTabPage
             // 
@@ -99,8 +112,8 @@
             this.alleArtikelenTabPage.HorizontalScrollbarSize = 10;
             this.alleArtikelenTabPage.Location = new System.Drawing.Point(4, 35);
             this.alleArtikelenTabPage.Name = "alleArtikelenTabPage";
-            this.alleArtikelenTabPage.Size = new System.Drawing.Size(1109, 415);
-            this.alleArtikelenTabPage.Style = MetroFramework.MetroColorStyle.Blue;
+            this.alleArtikelenTabPage.Size = new System.Drawing.Size(1059, 619);
+            this.alleArtikelenTabPage.Style = MetroFramework.MetroColorStyle.Magenta;
             this.alleArtikelenTabPage.StyleManager = null;
             this.alleArtikelenTabPage.TabIndex = 1;
             this.alleArtikelenTabPage.Text = "Overzicht alle artikelen";
@@ -127,42 +140,9 @@
             this.artikelenLijst.Location = new System.Drawing.Point(0, 0);
             this.artikelenLijst.Name = "artikelenLijst";
             this.artikelenLijst.RowHeadersWidth = 25;
-            this.artikelenLijst.Size = new System.Drawing.Size(1109, 415);
+            this.artikelenLijst.Size = new System.Drawing.Size(1059, 619);
             this.artikelenLijst.TabIndex = 2;
             this.artikelenLijst.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.artikelenLijst_CellContentDoubleClick);
-            // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.CustomBackground = false;
-            this.metroTabPage1.HorizontalScrollbar = false;
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1109, 415);
-            this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTabPage1.StyleManager = null;
-            this.metroTabPage1.TabIndex = 3;
-            this.metroTabPage1.Text = "Instellingen";
-            this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTabPage1.VerticalScrollbar = false;
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Toledo.Desktop.Properties.Resources.barcode_scan;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1109, 415);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // Barcode
             // 
@@ -204,23 +184,44 @@
             this.Categorie.HeaderText = "Categorie";
             this.Categorie.Name = "Categorie";
             // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.CustomBackground = false;
+            this.metroTabPage1.HorizontalScrollbar = false;
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(1109, 415);
+            this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Magenta;
+            this.metroTabPage1.StyleManager = null;
+            this.metroTabPage1.TabIndex = 3;
+            this.metroTabPage1.Text = "Instellingen";
+            this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTabPage1.VerticalScrollbar = false;
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
             // Beheren
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 534);
+            this.ClientSize = new System.Drawing.Size(1107, 738);
             this.Controls.Add(this.metroTabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Beheren";
+            this.Style = MetroFramework.MetroColorStyle.Magenta;
             this.Text = "Beheren";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Beheren_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.artikelenBewerken.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.alleArtikelenTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.artikelenLijst)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

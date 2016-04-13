@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Verkopen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Verkopen));
             this.verkopenGrid = new System.Windows.Forms.DataGridView();
             this.barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aantal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +41,8 @@
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.verkoopNr = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,8 +54,6 @@
             this.btwVrij = new System.Windows.Forms.Label();
             this.totaalExclBtw = new System.Windows.Forms.Label();
             this.totaalInclBtw = new System.Windows.Forms.Label();
-            this.verkoopNr = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.verkopenGrid)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -143,7 +143,7 @@
             this.metroButton2.Location = new System.Drawing.Point(954, 3);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(153, 26);
-            this.metroButton2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton2.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroButton2.StyleManager = null;
             this.metroButton2.TabIndex = 0;
             this.metroButton2.Text = "Nieuwe verkoop";
@@ -155,7 +155,7 @@
             this.metroButton5.Location = new System.Drawing.Point(795, 3);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(153, 26);
-            this.metroButton5.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton5.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroButton5.StyleManager = null;
             this.metroButton5.TabIndex = 0;
             this.metroButton5.Text = "Annuleer verkoop";
@@ -167,7 +167,7 @@
             this.metroButton3.Location = new System.Drawing.Point(636, 3);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(153, 26);
-            this.metroButton3.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton3.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroButton3.StyleManager = null;
             this.metroButton3.TabIndex = 0;
             this.metroButton3.Text = "Correctie";
@@ -179,7 +179,7 @@
             this.metroButton1.Location = new System.Drawing.Point(599, 3);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(31, 26);
-            this.metroButton1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroButton1.StyleManager = null;
             this.metroButton1.TabIndex = 0;
             this.metroButton1.Text = "-";
@@ -191,11 +191,31 @@
             this.metroButton4.Location = new System.Drawing.Point(562, 3);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(31, 26);
-            this.metroButton4.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton4.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroButton4.StyleManager = null;
             this.metroButton4.TabIndex = 0;
             this.metroButton4.Text = "+";
             this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(536, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 24);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "0";
+            // 
+            // verkoopNr
+            // 
+            this.verkoopNr.AutoSize = true;
+            this.verkoopNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verkoopNr.Location = new System.Drawing.Point(367, 0);
+            this.verkoopNr.Name = "verkoopNr";
+            this.verkoopNr.Size = new System.Drawing.Size(163, 24);
+            this.verkoopNr.TabIndex = 5;
+            this.verkoopNr.Text = "Verkoop nummer:";
             // 
             // tableLayoutPanel1
             // 
@@ -325,26 +345,6 @@
             this.totaalInclBtw.TabIndex = 0;
             this.totaalInclBtw.Text = "€0,00";
             // 
-            // verkoopNr
-            // 
-            this.verkoopNr.AutoSize = true;
-            this.verkoopNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verkoopNr.Location = new System.Drawing.Point(367, 0);
-            this.verkoopNr.Name = "verkoopNr";
-            this.verkoopNr.Size = new System.Drawing.Size(163, 24);
-            this.verkoopNr.TabIndex = 5;
-            this.verkoopNr.Text = "Verkoop nummer:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(536, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 24);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "0";
-            // 
             // Verkopen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +356,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Verkopen";
+            this.Style = MetroFramework.MetroColorStyle.Magenta;
             this.Text = "Verkopen";
             this.Load += new System.EventHandler(this.Verkopen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.verkopenGrid)).EndInit();

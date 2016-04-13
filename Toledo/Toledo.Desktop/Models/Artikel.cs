@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Toledo.Desktop.Models
 {
@@ -22,7 +17,7 @@ namespace Toledo.Desktop.Models
         [NotMapped]
         public decimal Prijs {
             get {
-                return KortingsPrijsInclBtw != null ? KortingsPrijsInclBtw.Value : (StandaardPrijsInclBtw != null ? StandaardPrijsInclBtw.Value : 0m); 
+                return KortingsPrijsInclBtw ?? (StandaardPrijsInclBtw != null ? StandaardPrijsInclBtw.Value : 0m); 
             }
         }
     }

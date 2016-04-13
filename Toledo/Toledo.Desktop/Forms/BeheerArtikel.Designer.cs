@@ -51,7 +51,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Annuleren = new MetroFramework.Controls.MetroButton();
+            this.annuleren = new MetroFramework.Controls.MetroButton();
             this.verwijderen = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -64,7 +64,7 @@
             this.opslaanBtn.Location = new System.Drawing.Point(727, 3);
             this.opslaanBtn.Name = "opslaanBtn";
             this.opslaanBtn.Size = new System.Drawing.Size(126, 33);
-            this.opslaanBtn.Style = MetroFramework.MetroColorStyle.Blue;
+            this.opslaanBtn.Style = MetroFramework.MetroColorStyle.Magenta;
             this.opslaanBtn.StyleManager = null;
             this.opslaanBtn.TabIndex = 4;
             this.opslaanBtn.Text = "Opslaan";
@@ -81,7 +81,7 @@
             this.standaardPrijsInclBtw.Name = "standaardPrijsInclBtw";
             this.standaardPrijsInclBtw.SelectedText = "";
             this.standaardPrijsInclBtw.Size = new System.Drawing.Size(293, 25);
-            this.standaardPrijsInclBtw.Style = MetroFramework.MetroColorStyle.Blue;
+            this.standaardPrijsInclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
             this.standaardPrijsInclBtw.StyleManager = null;
             this.standaardPrijsInclBtw.TabIndex = 4;
             this.standaardPrijsInclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -98,7 +98,7 @@
             this.btw6.Location = new System.Drawing.Point(418, 168);
             this.btw6.Name = "btw6";
             this.btw6.Size = new System.Drawing.Size(51, 24);
-            this.btw6.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btw6.Style = MetroFramework.MetroColorStyle.Magenta;
             this.btw6.StyleManager = null;
             this.btw6.TabIndex = 11;
             this.btw6.Text = "6%";
@@ -117,7 +117,7 @@
             this.btw21.Location = new System.Drawing.Point(418, 138);
             this.btw21.Name = "btw21";
             this.btw21.Size = new System.Drawing.Size(57, 24);
-            this.btw21.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btw21.Style = MetroFramework.MetroColorStyle.Magenta;
             this.btw21.StyleManager = null;
             this.btw21.TabIndex = 2;
             this.btw21.TabStop = true;
@@ -136,7 +136,7 @@
             this.btw0.Location = new System.Drawing.Point(418, 198);
             this.btw0.Name = "btw0";
             this.btw0.Size = new System.Drawing.Size(51, 24);
-            this.btw0.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btw0.Style = MetroFramework.MetroColorStyle.Magenta;
             this.btw0.StyleManager = null;
             this.btw0.TabIndex = 11;
             this.btw0.Text = "0%";
@@ -155,7 +155,7 @@
             this.metroLabel9.Location = new System.Drawing.Point(321, 137);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(91, 25);
-            this.metroLabel9.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel9.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel9.StyleManager = null;
             this.metroLabel9.TabIndex = 10;
             this.metroLabel9.Text = "BTW tarief";
@@ -172,7 +172,7 @@
             this.standaardPrijsExclBtw.Name = "standaardPrijsExclBtw";
             this.standaardPrijsExclBtw.SelectedText = "";
             this.standaardPrijsExclBtw.Size = new System.Drawing.Size(293, 25);
-            this.standaardPrijsExclBtw.Style = MetroFramework.MetroColorStyle.Blue;
+            this.standaardPrijsExclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
             this.standaardPrijsExclBtw.StyleManager = null;
             this.standaardPrijsExclBtw.TabIndex = 3;
             this.standaardPrijsExclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -189,7 +189,7 @@
             this.kortingsPrijsExclBtw.Name = "kortingsPrijsExclBtw";
             this.kortingsPrijsExclBtw.SelectedText = "";
             this.kortingsPrijsExclBtw.Size = new System.Drawing.Size(293, 25);
-            this.kortingsPrijsExclBtw.Style = MetroFramework.MetroColorStyle.Blue;
+            this.kortingsPrijsExclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
             this.kortingsPrijsExclBtw.StyleManager = null;
             this.kortingsPrijsExclBtw.TabIndex = 5;
             this.kortingsPrijsExclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -206,7 +206,7 @@
             this.kortingsPrijsInclBtw.Name = "kortingsPrijsInclBtw";
             this.kortingsPrijsInclBtw.SelectedText = "";
             this.kortingsPrijsInclBtw.Size = new System.Drawing.Size(293, 25);
-            this.kortingsPrijsInclBtw.Style = MetroFramework.MetroColorStyle.Blue;
+            this.kortingsPrijsInclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
             this.kortingsPrijsInclBtw.StyleManager = null;
             this.kortingsPrijsInclBtw.TabIndex = 6;
             this.kortingsPrijsInclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -224,7 +224,7 @@
             this.metroLabel4.Location = new System.Drawing.Point(208, 265);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(204, 25);
-            this.metroLabel4.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel4.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel4.StyleManager = null;
             this.metroLabel4.TabIndex = 3;
             this.metroLabel4.Text = "Standaard prijs excl. BTW";
@@ -242,7 +242,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(211, 300);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(201, 25);
-            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel2.StyleManager = null;
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "Standaard prijs incl. BTW";
@@ -260,7 +260,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(228, 370);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(184, 25);
-            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel5.StyleManager = null;
             this.metroLabel5.TabIndex = 3;
             this.metroLabel5.Text = "Kortingsprijs excl. BTW";
@@ -278,7 +278,7 @@
             this.metroLabel6.Location = new System.Drawing.Point(231, 405);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(181, 25);
-            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel6.StyleManager = null;
             this.metroLabel6.TabIndex = 1;
             this.metroLabel6.Text = "Kortingsprijs incl. BTW";
@@ -307,7 +307,7 @@
             this.metroLabel7.Location = new System.Drawing.Point(327, 475);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(85, 25);
-            this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel7.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel7.StyleManager = null;
             this.metroLabel7.TabIndex = 4;
             this.metroLabel7.Text = "Categorie";
@@ -326,7 +326,7 @@
             this.leverbaar.Location = new System.Drawing.Point(418, 510);
             this.leverbaar.Name = "leverbaar";
             this.leverbaar.Size = new System.Drawing.Size(33, 25);
-            this.leverbaar.Style = MetroFramework.MetroColorStyle.Blue;
+            this.leverbaar.Style = MetroFramework.MetroColorStyle.Magenta;
             this.leverbaar.StyleManager = null;
             this.leverbaar.TabIndex = 9;
             this.leverbaar.Tag = "";
@@ -347,7 +347,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(326, 510);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(86, 25);
-            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel8.StyleManager = null;
             this.metroLabel8.TabIndex = 6;
             this.metroLabel8.Text = "Leverbaar";
@@ -364,7 +364,7 @@
             this.omschrijving.Name = "omschrijving";
             this.omschrijving.SelectedText = "";
             this.omschrijving.Size = new System.Drawing.Size(293, 25);
-            this.omschrijving.Style = MetroFramework.MetroColorStyle.Blue;
+            this.omschrijving.Style = MetroFramework.MetroColorStyle.Magenta;
             this.omschrijving.StyleManager = null;
             this.omschrijving.TabIndex = 1;
             this.omschrijving.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -380,7 +380,7 @@
             this.artikelCode.Name = "artikelCode";
             this.artikelCode.SelectedText = "";
             this.artikelCode.Size = new System.Drawing.Size(293, 25);
-            this.artikelCode.Style = MetroFramework.MetroColorStyle.Blue;
+            this.artikelCode.Style = MetroFramework.MetroColorStyle.Magenta;
             this.artikelCode.StyleManager = null;
             this.artikelCode.TabIndex = 5;
             this.artikelCode.TabStop = false;
@@ -398,7 +398,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(315, 35);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(97, 25);
-            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel3.StyleManager = null;
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Artikelcode";
@@ -416,7 +416,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(300, 70);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(112, 25);
-            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel1.StyleManager = null;
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Omschrijving";
@@ -476,7 +476,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.opslaanBtn);
-            this.flowLayoutPanel1.Controls.Add(this.Annuleren);
+            this.flowLayoutPanel1.Controls.Add(this.annuleren);
             this.flowLayoutPanel1.Controls.Add(this.verwijderen);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
@@ -485,19 +485,19 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(856, 37);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // Annuleren
+            // annuleren
             // 
-            this.Annuleren.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Annuleren.Highlight = false;
-            this.Annuleren.Location = new System.Drawing.Point(595, 3);
-            this.Annuleren.Name = "Annuleren";
-            this.Annuleren.Size = new System.Drawing.Size(126, 33);
-            this.Annuleren.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Annuleren.StyleManager = null;
-            this.Annuleren.TabIndex = 4;
-            this.Annuleren.Text = "Annuleren";
-            this.Annuleren.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Annuleren.Click += new System.EventHandler(this.opslaanBtn_Click);
+            this.annuleren.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.annuleren.Highlight = false;
+            this.annuleren.Location = new System.Drawing.Point(595, 3);
+            this.annuleren.Name = "annuleren";
+            this.annuleren.Size = new System.Drawing.Size(126, 33);
+            this.annuleren.Style = MetroFramework.MetroColorStyle.Magenta;
+            this.annuleren.StyleManager = null;
+            this.annuleren.TabIndex = 4;
+            this.annuleren.Text = "Annuleren";
+            this.annuleren.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.annuleren.Click += new System.EventHandler(this.opslaanBtn_Click);
             // 
             // verwijderen
             // 
@@ -506,7 +506,7 @@
             this.verwijderen.Location = new System.Drawing.Point(463, 3);
             this.verwijderen.Name = "verwijderen";
             this.verwijderen.Size = new System.Drawing.Size(126, 33);
-            this.verwijderen.Style = MetroFramework.MetroColorStyle.Blue;
+            this.verwijderen.Style = MetroFramework.MetroColorStyle.Magenta;
             this.verwijderen.StyleManager = null;
             this.verwijderen.TabIndex = 4;
             this.verwijderen.Text = "Verwijderen";
@@ -522,6 +522,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "BeheerArtikel";
+            this.Style = MetroFramework.MetroColorStyle.Magenta;
             this.Text = "Beheer artikel";
             this.Load += new System.EventHandler(this.BeheerArtikel_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -556,7 +557,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MetroFramework.Controls.MetroButton Annuleren;
+        private MetroFramework.Controls.MetroButton annuleren;
         private MetroFramework.Controls.MetroButton verwijderen;
     }
 }
