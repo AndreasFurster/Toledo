@@ -103,6 +103,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Instellingen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Instellingen.Designer.cs">
+      <DependentUpon>Instellingen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\CustomMetroForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Forms\Verkopen.Designer.cs">
       <DependentUpon>Verkopen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Instellingen.resx">
+      <DependentUpon>Instellingen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Helpers\CustomMetroForm.resx">
       <DependentUpon>CustomMetroForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,7 +197,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Toledo.Desktop_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

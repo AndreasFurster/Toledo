@@ -39,7 +39,6 @@
             this.BtwTarief = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabControl1.SuspendLayout();
             this.artikelenBewerken.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,14 +50,13 @@
             // 
             this.metroTabControl1.Controls.Add(this.artikelenBewerken);
             this.metroTabControl1.Controls.Add(this.alleArtikelenTabPage);
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.CustomBackground = false;
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Medium;
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Light;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1067, 658);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroTabControl1.StyleManager = null;
@@ -78,7 +76,7 @@
             this.artikelenBewerken.HorizontalScrollbarSize = 10;
             this.artikelenBewerken.Location = new System.Drawing.Point(4, 35);
             this.artikelenBewerken.Name = "artikelenBewerken";
-            this.artikelenBewerken.Size = new System.Drawing.Size(1109, 415);
+            this.artikelenBewerken.Size = new System.Drawing.Size(1059, 619);
             this.artikelenBewerken.Style = MetroFramework.MetroColorStyle.Magenta;
             this.artikelenBewerken.StyleManager = null;
             this.artikelenBewerken.TabIndex = 2;
@@ -98,7 +96,7 @@
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1109, 415);
+            this.pictureBox1.Size = new System.Drawing.Size(1059, 619);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -136,7 +134,7 @@
             this.BtwTarief,
             this.prijs,
             this.Categorie});
-            this.artikelenLijst.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.artikelenLijst.Dock = System.Windows.Forms.DockStyle.Left;
             this.artikelenLijst.Location = new System.Drawing.Point(0, 0);
             this.artikelenLijst.Name = "artikelenLijst";
             this.artikelenLijst.RowHeadersWidth = 25;
@@ -184,26 +182,6 @@
             this.Categorie.HeaderText = "Categorie";
             this.Categorie.Name = "Categorie";
             // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.CustomBackground = false;
-            this.metroTabPage1.HorizontalScrollbar = false;
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1109, 415);
-            this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.metroTabPage1.StyleManager = null;
-            this.metroTabPage1.TabIndex = 3;
-            this.metroTabPage1.Text = "Instellingen";
-            this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTabPage1.VerticalScrollbar = false;
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
-            // 
             // Beheren
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +209,6 @@
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage alleArtikelenTabPage;
         private MetroFramework.Controls.MetroTabPage artikelenBewerken;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView artikelenLijst;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barcode;

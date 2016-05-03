@@ -1,13 +1,18 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using Toledo.Desktop.Models;
 
 namespace Toledo.Desktop.Data
 {
     class ToledoDb : DbContext
     {
-        public ToledoDb() : base("Toledo")
+        public ToledoDb(string connection) : base(connection)
         {
-            Database.SetInitializer(new CreateDatabaseIfNotExists<ToledoDb>());
+        }
+
+        public ToledoDb() : base(Program.Settings.ConnectionString)
+        {
+           // Database.SetInitializer(new CreateDatabaseIfNotExists<ToledoDb>());
         }
 
         public DbSet<Artikel> Artikelen { get; set; }

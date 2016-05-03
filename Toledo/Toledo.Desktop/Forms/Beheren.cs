@@ -13,7 +13,7 @@ namespace Toledo.Desktop.Forms
         {
             InitializeComponent();
             ListenForBarcodes();
-            BarcodeInput += new BarcodeInputHandler(ArtikelenBeheren_BarcodeInput);
+            BarcodeInput += ArtikelenBeheren_BarcodeInput;
         }
 
         private void Beheren_Load(object sender, EventArgs e)
