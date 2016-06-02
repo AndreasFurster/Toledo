@@ -29,22 +29,16 @@
         private void InitializeComponent()
         {
             this.opslaanBtn = new MetroFramework.Controls.MetroButton();
-            this.standaardPrijsInclBtw = new MetroFramework.Controls.MetroTextBox();
+            this.prijsInclBtw = new MetroFramework.Controls.MetroTextBox();
             this.btw6 = new MetroFramework.Controls.MetroRadioButton();
             this.btw21 = new MetroFramework.Controls.MetroRadioButton();
             this.btw0 = new MetroFramework.Controls.MetroRadioButton();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.standaardPrijsExclBtw = new MetroFramework.Controls.MetroTextBox();
-            this.kortingsPrijsExclBtw = new MetroFramework.Controls.MetroTextBox();
-            this.kortingsPrijsInclBtw = new MetroFramework.Controls.MetroTextBox();
+            this.prijsExclBtw = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.categorie = new System.Windows.Forms.ComboBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.leverbaar = new MetroFramework.Controls.MetroCheckBox();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.omschrijving = new MetroFramework.Controls.MetroTextBox();
             this.artikelCode = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -71,22 +65,22 @@
             this.opslaanBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             this.opslaanBtn.Click += new System.EventHandler(this.opslaanBtn_Click);
             // 
-            // standaardPrijsInclBtw
+            // prijsInclBtw
             // 
-            this.standaardPrijsInclBtw.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.standaardPrijsInclBtw.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.standaardPrijsInclBtw.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.standaardPrijsInclBtw.Location = new System.Drawing.Point(418, 300);
-            this.standaardPrijsInclBtw.Multiline = false;
-            this.standaardPrijsInclBtw.Name = "standaardPrijsInclBtw";
-            this.standaardPrijsInclBtw.SelectedText = "";
-            this.standaardPrijsInclBtw.Size = new System.Drawing.Size(293, 25);
-            this.standaardPrijsInclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.standaardPrijsInclBtw.StyleManager = null;
-            this.standaardPrijsInclBtw.TabIndex = 4;
-            this.standaardPrijsInclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.standaardPrijsInclBtw.UseStyleColors = false;
-            this.standaardPrijsInclBtw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.standaardPrijsInclBtw_KeyUp);
+            this.prijsInclBtw.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.prijsInclBtw.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.prijsInclBtw.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.prijsInclBtw.Location = new System.Drawing.Point(418, 300);
+            this.prijsInclBtw.Multiline = false;
+            this.prijsInclBtw.Name = "prijsInclBtw";
+            this.prijsInclBtw.SelectedText = "";
+            this.prijsInclBtw.Size = new System.Drawing.Size(293, 25);
+            this.prijsInclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
+            this.prijsInclBtw.StyleManager = null;
+            this.prijsInclBtw.TabIndex = 4;
+            this.prijsInclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.prijsInclBtw.UseStyleColors = false;
+            this.prijsInclBtw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.prijsInclBtw_KeyUp);
             // 
             // btw6
             // 
@@ -162,56 +156,22 @@
             this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel9.UseStyleColors = false;
             // 
-            // standaardPrijsExclBtw
+            // prijsExclBtw
             // 
-            this.standaardPrijsExclBtw.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.standaardPrijsExclBtw.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.standaardPrijsExclBtw.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.standaardPrijsExclBtw.Location = new System.Drawing.Point(418, 265);
-            this.standaardPrijsExclBtw.Multiline = false;
-            this.standaardPrijsExclBtw.Name = "standaardPrijsExclBtw";
-            this.standaardPrijsExclBtw.SelectedText = "";
-            this.standaardPrijsExclBtw.Size = new System.Drawing.Size(293, 25);
-            this.standaardPrijsExclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.standaardPrijsExclBtw.StyleManager = null;
-            this.standaardPrijsExclBtw.TabIndex = 3;
-            this.standaardPrijsExclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.standaardPrijsExclBtw.UseStyleColors = false;
-            this.standaardPrijsExclBtw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.standaardPrijsExclBtw_KeyUp);
-            // 
-            // kortingsPrijsExclBtw
-            // 
-            this.kortingsPrijsExclBtw.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.kortingsPrijsExclBtw.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.kortingsPrijsExclBtw.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.kortingsPrijsExclBtw.Location = new System.Drawing.Point(418, 370);
-            this.kortingsPrijsExclBtw.Multiline = false;
-            this.kortingsPrijsExclBtw.Name = "kortingsPrijsExclBtw";
-            this.kortingsPrijsExclBtw.SelectedText = "";
-            this.kortingsPrijsExclBtw.Size = new System.Drawing.Size(293, 25);
-            this.kortingsPrijsExclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.kortingsPrijsExclBtw.StyleManager = null;
-            this.kortingsPrijsExclBtw.TabIndex = 5;
-            this.kortingsPrijsExclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.kortingsPrijsExclBtw.UseStyleColors = false;
-            this.kortingsPrijsExclBtw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.kortingsPrijsExclBtw_KeyUp);
-            // 
-            // kortingsPrijsInclBtw
-            // 
-            this.kortingsPrijsInclBtw.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.kortingsPrijsInclBtw.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.kortingsPrijsInclBtw.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.kortingsPrijsInclBtw.Location = new System.Drawing.Point(418, 405);
-            this.kortingsPrijsInclBtw.Multiline = false;
-            this.kortingsPrijsInclBtw.Name = "kortingsPrijsInclBtw";
-            this.kortingsPrijsInclBtw.SelectedText = "";
-            this.kortingsPrijsInclBtw.Size = new System.Drawing.Size(293, 25);
-            this.kortingsPrijsInclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.kortingsPrijsInclBtw.StyleManager = null;
-            this.kortingsPrijsInclBtw.TabIndex = 6;
-            this.kortingsPrijsInclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.kortingsPrijsInclBtw.UseStyleColors = false;
-            this.kortingsPrijsInclBtw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.kortingsPrijsInclBtw_KeyUp);
+            this.prijsExclBtw.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.prijsExclBtw.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.prijsExclBtw.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.prijsExclBtw.Location = new System.Drawing.Point(418, 265);
+            this.prijsExclBtw.Multiline = false;
+            this.prijsExclBtw.Name = "prijsExclBtw";
+            this.prijsExclBtw.SelectedText = "";
+            this.prijsExclBtw.Size = new System.Drawing.Size(293, 25);
+            this.prijsExclBtw.Style = MetroFramework.MetroColorStyle.Magenta;
+            this.prijsExclBtw.StyleManager = null;
+            this.prijsExclBtw.TabIndex = 3;
+            this.prijsExclBtw.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.prijsExclBtw.UseStyleColors = false;
+            this.prijsExclBtw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.prijsExclBtw_KeyUp);
             // 
             // metroLabel4
             // 
@@ -221,13 +181,13 @@
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.metroLabel4.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel4.Location = new System.Drawing.Point(208, 265);
+            this.metroLabel4.Location = new System.Drawing.Point(290, 265);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(204, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(122, 25);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel4.StyleManager = null;
             this.metroLabel4.TabIndex = 3;
-            this.metroLabel4.Text = "Standaard prijs excl. BTW";
+            this.metroLabel4.Text = "Prijs excl. BTW";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel4.UseStyleColors = false;
             // 
@@ -239,51 +199,15 @@
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.metroLabel2.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel2.Location = new System.Drawing.Point(211, 300);
+            this.metroLabel2.Location = new System.Drawing.Point(293, 300);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(201, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(119, 25);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Magenta;
             this.metroLabel2.StyleManager = null;
             this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "Standaard prijs incl. BTW";
+            this.metroLabel2.Text = "Prijs incl. BTW";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel2.UseStyleColors = false;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.CustomBackground = false;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel5.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel5.Location = new System.Drawing.Point(228, 370);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(184, 25);
-            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.metroLabel5.StyleManager = null;
-            this.metroLabel5.TabIndex = 3;
-            this.metroLabel5.Text = "Kortingsprijs excl. BTW";
-            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel5.UseStyleColors = false;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.CustomBackground = false;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel6.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel6.Location = new System.Drawing.Point(231, 405);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(181, 25);
-            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.metroLabel6.StyleManager = null;
-            this.metroLabel6.TabIndex = 1;
-            this.metroLabel6.Text = "Kortingsprijs incl. BTW";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel6.UseStyleColors = false;
             // 
             // categorie
             // 
@@ -291,7 +215,7 @@
             this.categorie.BackColor = System.Drawing.SystemColors.Control;
             this.categorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categorie.FormattingEnabled = true;
-            this.categorie.Location = new System.Drawing.Point(418, 475);
+            this.categorie.Location = new System.Drawing.Point(418, 370);
             this.categorie.Name = "categorie";
             this.categorie.Size = new System.Drawing.Size(293, 24);
             this.categorie.TabIndex = 7;
@@ -304,7 +228,7 @@
             this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.metroLabel7.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel7.Location = new System.Drawing.Point(327, 475);
+            this.metroLabel7.Location = new System.Drawing.Point(327, 370);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(85, 25);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Magenta;
@@ -313,46 +237,6 @@
             this.metroLabel7.Text = "Categorie";
             this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel7.UseStyleColors = false;
-            // 
-            // leverbaar
-            // 
-            this.leverbaar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.leverbaar.AutoSize = true;
-            this.leverbaar.Checked = true;
-            this.leverbaar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.leverbaar.CustomBackground = false;
-            this.leverbaar.FontSize = MetroFramework.MetroLinkSize.Tall;
-            this.leverbaar.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.leverbaar.Location = new System.Drawing.Point(418, 510);
-            this.leverbaar.Name = "leverbaar";
-            this.leverbaar.Size = new System.Drawing.Size(33, 25);
-            this.leverbaar.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.leverbaar.StyleManager = null;
-            this.leverbaar.TabIndex = 9;
-            this.leverbaar.Tag = "";
-            this.leverbaar.Text = " ";
-            this.leverbaar.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.leverbaar.UseStyleColors = false;
-            this.leverbaar.UseVisualStyleBackColor = true;
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroLabel8.CustomBackground = false;
-            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel8.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel8.Location = new System.Drawing.Point(326, 510);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(86, 25);
-            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.metroLabel8.StyleManager = null;
-            this.metroLabel8.TabIndex = 6;
-            this.metroLabel8.Text = "Leverbaar";
-            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel8.UseStyleColors = false;
             // 
             // omschrijving
             // 
@@ -433,27 +317,21 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.artikelCode, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.omschrijving, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel8, 0, 14);
-            this.tableLayoutPanel1.Controls.Add(this.leverbaar, 1, 14);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel7, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.categorie, 1, 13);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel6, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel5, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel7, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.categorie, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel4, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.kortingsPrijsInclBtw, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.kortingsPrijsExclBtw, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.standaardPrijsExclBtw, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.prijsExclBtw, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel9, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btw0, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.btw21, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.btw6, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.standaardPrijsInclBtw, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.prijsInclBtw, 1, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.tableLayoutPanel1.RowCount = 16;
+            this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -467,9 +345,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(856, 555);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
@@ -535,22 +413,16 @@
         #endregion
 
         private MetroFramework.Controls.MetroButton opslaanBtn;
-        private MetroFramework.Controls.MetroTextBox standaardPrijsInclBtw;
+        private MetroFramework.Controls.MetroTextBox prijsInclBtw;
         private MetroFramework.Controls.MetroRadioButton btw6;
         private MetroFramework.Controls.MetroRadioButton btw21;
         private MetroFramework.Controls.MetroRadioButton btw0;
         private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroTextBox standaardPrijsExclBtw;
-        private MetroFramework.Controls.MetroTextBox kortingsPrijsExclBtw;
-        private MetroFramework.Controls.MetroTextBox kortingsPrijsInclBtw;
+        private MetroFramework.Controls.MetroTextBox prijsExclBtw;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.ComboBox categorie;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroCheckBox leverbaar;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox omschrijving;
         private MetroFramework.Controls.MetroTextBox artikelCode;
         private MetroFramework.Controls.MetroLabel metroLabel3;

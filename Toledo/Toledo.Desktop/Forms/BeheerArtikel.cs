@@ -10,7 +10,7 @@ namespace Toledo.Desktop.Forms
 {
     public partial class BeheerArtikel : CustomMetroForm
     {
-        private ToledoDb _db = new ToledoDb();
+        private readonly ToledoDb _db = new ToledoDb();
         private Artikel _artikel;
 
         public BeheerArtikel(string barcode)
@@ -42,40 +42,32 @@ namespace Toledo.Desktop.Forms
                     throw new ArgumentOutOfRangeException();
             }
 
-            standaardPrijsInclBtw.Text = _artikel.StandaardPrijsInclBtw.ToString();
-            standaardPrijsExclBtw.Text = SubtractBtw(_artikel.StandaardPrijsInclBtw, _artikel.BtwTarief)?.ToString("0.00");
-
-            kortingsPrijsInclBtw.Text = _artikel.KortingsPrijsInclBtw.ToString();
-            kortingsPrijsExclBtw.Text = SubtractBtw(_artikel.KortingsPrijsInclBtw, _artikel.BtwTarief)?.ToString("0.00");
+            prijsInclBtw.Text = _artikel.PrijsInclBtw.ToString("0.00");
+            prijsExclBtw.Text = SubtractBtw(_artikel.PrijsInclBtw, _artikel.BtwTarief)?.ToString("0.00");
 
             categorie.DataSource = _db.Categorieen.ToArray();
             categorie.SelectedIndex = categorie.FindStringExact(_artikel.Categorie?.Name);
-
-            leverbaar.Checked = _artikel.Leverbaar;
         }
 
         private void opslaanBtn_Click(object sender, EventArgs e)
         {
             _artikel.Omschrijving = omschrijving.Text;
 
-            if (btw21.Checked) _artikel.BtwTarief = BtwTarief.Btw21;
-            if (btw6.Checked) _artikel.BtwTarief = BtwTarief.Btw6;
-            if (btw0.Checked) _artikel.BtwTarief = BtwTarief.Btw0;
+            _artikel.BtwTarief = GetBtwTarief();
 
-            decimal standaardPrijs;
-            var heeftStandaardPrijs = decimal.TryParse(standaardPrijsInclBtw.Text, out standaardPrijs);
+            decimal prijs;
+            var heeftPrijs = decimal.TryParse(prijsInclBtw.Text, out prijs);
 
-            decimal kortingsPrijs;
-            var heeftKortingsPrijs = decimal.TryParse(kortingsPrijsExclBtw.Text, out kortingsPrijs);
+            if (!heeftPrijs)
+            {
+                prijs = 0;
+            }
 
-            _artikel.StandaardPrijsInclBtw = heeftStandaardPrijs ? standaardPrijs : (decimal?) null;
-            _artikel.KortingsPrijsInclBtw = heeftKortingsPrijs ? kortingsPrijs : (decimal?) null;
+            _artikel.PrijsInclBtw = prijs;
 
             var cat = _db.Categorieen.SingleOrDefault(c => c.Name == categorie.Text) ?? _db.Categorieen.Add(new Categorie(categorie.Text));
 
             _artikel.Categorie = cat;
-
-            _artikel.Leverbaar = leverbaar.Checked;
 
             if (_db.Artikelen.Any(a => a.Id == _artikel.Id))
             {
@@ -113,65 +105,38 @@ namespace Toledo.Desktop.Forms
         {
             if (btw6.Checked)
                 return BtwTarief.Btw6;
+
             if (btw0.Checked)
                 return BtwTarief.Btw0;
 
             return BtwTarief.Btw21;
         }
 
-        private void standaardPrijsExclBtw_KeyUp(object sender, KeyEventArgs e)
+        private void prijsExclBtw_KeyUp(object sender, KeyEventArgs e)
         {
-            decimal exclPrijs = 0;
-            if (!decimal.TryParse(standaardPrijsExclBtw.Text, out exclPrijs))
+            decimal exclPrijs;
+            if (!decimal.TryParse(prijsExclBtw.Text, out exclPrijs))
             {
-                standaardPrijsExclBtw.Tag = "error";
+                prijsExclBtw.Tag = "error";
             }
             else
             {
-                standaardPrijsInclBtw.Text = AddBtw(exclPrijs, GetBtwTarief())?.ToString("0.00");
-                standaardPrijsExclBtw.Tag = null;
+                prijsInclBtw.Text = AddBtw(exclPrijs, GetBtwTarief())?.ToString("0.00");
+                prijsExclBtw.Tag = null;
             }
         }
 
-        private void standaardPrijsInclBtw_KeyUp(object sender, KeyEventArgs e)
+        private void prijsInclBtw_KeyUp(object sender, KeyEventArgs e)
         {
-            decimal inclPrijs = 0;
-            if (!decimal.TryParse(standaardPrijsInclBtw.Text, out inclPrijs))
+            decimal inclPrijs;
+            if (!decimal.TryParse(prijsInclBtw.Text, out inclPrijs))
             {
-                standaardPrijsInclBtw.Tag = "error";
+                prijsInclBtw.Tag = "error";
             }
             else
             {
-                standaardPrijsExclBtw.Text = SubtractBtw(inclPrijs, GetBtwTarief())?.ToString("0.00");
-                standaardPrijsInclBtw.Tag = null;
-            }
-        }
-
-        private void kortingsPrijsExclBtw_KeyUp(object sender, KeyEventArgs e)
-        {
-            decimal exclPrijs = 0;
-            if (!decimal.TryParse(kortingsPrijsExclBtw.Text, out exclPrijs))
-            {
-                kortingsPrijsExclBtw.Tag = "error";
-            }
-            else
-            {
-                kortingsPrijsInclBtw.Text = AddBtw(exclPrijs, GetBtwTarief())?.ToString("0.00");
-                kortingsPrijsExclBtw.Tag = null;
-            }
-        }
-
-        private void kortingsPrijsInclBtw_KeyUp(object sender, KeyEventArgs e)
-        {
-            decimal inclPrijs = 0;
-            if (!decimal.TryParse(kortingsPrijsInclBtw.Text, out inclPrijs))
-            {
-                standaardPrijsInclBtw.Tag = "error";
-            }
-            else
-            {
-                kortingsPrijsExclBtw.Text = SubtractBtw(inclPrijs, GetBtwTarief())?.ToString("0.00");
-                kortingsPrijsInclBtw.Tag = null;
+                prijsExclBtw.Text = SubtractBtw(inclPrijs, GetBtwTarief())?.ToString("0.00");
+                prijsInclBtw.Tag = null;
             }
         }
     }

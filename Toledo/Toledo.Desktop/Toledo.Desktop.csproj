@@ -103,6 +103,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Afrekenen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Afrekenen.Designer.cs">
+      <DependentUpon>Afrekenen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Instellingen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,7 @@
     <Compile Include="Helpers\MetroColorConverter.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Artikel.cs" />
+    <Compile Include="Models\BetaalMethode.cs" />
     <Compile Include="Models\BtwTarief.cs" />
     <Compile Include="Models\Categorie.cs" />
     <Compile Include="Models\Verkoop.cs" />
@@ -151,6 +158,9 @@
     <Compile Include="Forms\Verkopen.Designer.cs">
       <DependentUpon>Verkopen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Afrekenen.resx">
+      <DependentUpon>Afrekenen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Instellingen.resx">
       <DependentUpon>Instellingen.cs</DependentUpon>
     </EmbeddedResource>

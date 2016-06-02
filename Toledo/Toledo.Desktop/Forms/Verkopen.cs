@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Windows.Forms;
 using Toledo.Desktop.Data;
 using Toledo.Desktop.Helpers;
 using Toledo.Desktop.Models;
@@ -10,12 +11,16 @@ namespace Toledo.Desktop.Forms
 {
     public partial class Verkopen : CustomMetroForm
     {
-        private readonly Verkoop _verkoop = new Verkoop();
+        private Verkoop _verkoop;
+        private Afrekenen _afrekenen;
 
         public Verkopen()
-        {
+        { 
             InitializeComponent();
             ListenForBarcodes();
+
+            _verkoop = new Verkoop();
+            
 
             BarcodeInput += Verkopen_BarcodeInput;
         }
@@ -51,8 +56,8 @@ namespace Toledo.Desktop.Forms
                     barcode = artikelgroep.Key,
                     aantal = artikelgroep.Count(),
                     beschrijving = artikelgroep.First().Omschrijving,
-                    prijsPerStuk = artikelgroep.First().KortingsPrijsInclBtw ?? artikelgroep.First().StandaardPrijsInclBtw,
-                    prijsTotaal = artikelgroep.Sum(a => a.KortingsPrijsInclBtw ?? a.StandaardPrijsInclBtw)
+                    prijsPerStuk = artikelgroep.First().PrijsInclBtw,
+                    prijsTotaal = artikelgroep.Sum(a => a.PrijsInclBtw)
                 });
             }
 
@@ -61,6 +66,29 @@ namespace Toledo.Desktop.Forms
 
         private void Verkopen_Load(object sender, EventArgs e)
         {
+        }
+
+        private void afrekenenBtn_Click(object sender, EventArgs e)
+        {
+            _afrekenen = new Afrekenen(_verkoop.Artikelen.Sum(a => a.PrijsInclBtw));
+            if (_afrekenen.ShowDialog(this) == DialogResult.OK)
+            {
+                _verkoop.BetaalMethode = _afrekenen.BetaalMethode;
+                _verkoop.VerkoopDatum = DateTime.Now;
+
+                using (var db = new ToledoDb())
+                {
+                    db.Verkopen.AddOrUpdate(_verkoop);
+                    db.SaveChangesAsync();
+                    _verkoop = new Verkoop();
+                    ReloadGrid();
+                }
+            }
+        }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,5 +10,6 @@ namespace Toledo.Desktop.Models
         public int Id { get; set; }
         public virtual List<Artikel> Artikelen { get; set; } = new List<Artikel>();
         public DateTime VerkoopDatum { get; set; } = DateTime.Now;
+        public BetaalMethode BetaalMethode { get; set; }
     }
 }

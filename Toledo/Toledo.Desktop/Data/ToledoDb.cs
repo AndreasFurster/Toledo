@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
+using Toledo.Desktop.Migrations;
 using Toledo.Desktop.Models;
 
 namespace Toledo.Desktop.Data
@@ -8,11 +10,11 @@ namespace Toledo.Desktop.Data
     {
         public ToledoDb(string connection) : base(connection)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ToledoDb, Configuration>());
         }
 
-        public ToledoDb() : base(Program.Settings.ConnectionString)
+        public ToledoDb() : this(Program.Settings.ConnectionString)
         {
-           // Database.SetInitializer(new CreateDatabaseIfNotExists<ToledoDb>());
         }
 
         public DbSet<Artikel> Artikelen { get; set; }

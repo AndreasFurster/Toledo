@@ -65,7 +65,7 @@ namespace Toledo.Desktop.Forms
                         omschrijving = a.Omschrijving,
                         btw = btwDescription,
                         categorie = a.Categorie,
-                        prijs = a.Prijs
+                        prijs = a.PrijsInclBtw
                     };
                 }).ToList();
                 artikelenLijst.DataSource = artikelen;

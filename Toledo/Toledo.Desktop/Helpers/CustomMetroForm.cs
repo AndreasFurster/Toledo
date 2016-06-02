@@ -10,7 +10,7 @@ namespace Toledo.Desktop.Helpers
         public event BarcodeInputHandler BarcodeInput;
         public delegate void BarcodeInputHandler(object sender, BarcodeInputEventArgs e);
 
-        private readonly Regex _barcodeRegex = new Regex("###([0-9]{12,13})###");
+        private readonly Regex _barcodeRegex = new Regex("([0-9]{13})");
 
         private string _pressedKeys = string.Empty;
 
